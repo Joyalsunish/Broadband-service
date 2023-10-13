@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
         <label for="data_limit_value">Data Limit Value:</label>
         <input type="text" name="data_limit_value" value="<?php echo $row['data_limit_value']; ?>"><br><br>
 
-        <label for="plan_speed">Plan Speed (Mbps):</label>
+        <label for="plan_speed">Plan Speed (mbps):</label>
         <input type="text" name="plan_speed" value="<?php echo $row['plan_speed']; ?>"><br><br>
 
         <label for="amount">Price (₹):</label>
