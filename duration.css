@@ -1,0 +1,31 @@
+body {
+    margin:50px 0px; padding:0px;
+    text-align:center;
+    width:auto; 
+    height:auto;
+}
+form {
+    width: 500px;
+    padding: 25px;
+    border: 5px solid gold;
+    margin:50px;
+    display: inline-block;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+  }
+  input{
+    background-color: rgb(241, 245, 245);
+    border-radius: 10px;
+  }
+  h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+    font-weight: bold;
+    color:rgb(138, 61, 7);
+    text-align:center;
+    text-transform: uppercase;
+  }
+  .f1{
+    color:rgb(58, 2, 199);
+  }
