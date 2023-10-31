@@ -1,5 +1,6 @@
 <?php
-include_once'connection.php';
+include_once 'connection.php';
+include_once 'message.php';
 $flag=1;
 $username="";
 $pincodeerr=$passworderr=$numbererr=$mailerr=$nameerr=$aadharnoerr=" ";
@@ -91,6 +92,10 @@ else{
 echo $flag;
 
 if($flag==1){
+    $useremail=$email;
+    $subject='Welcome to BroadBand Service ';
+    $message='You have successfully Registered to our BroadBand Service ';
+    email($useremail,$subject,$message);
 
 $usertype="user";
    
@@ -98,6 +103,8 @@ $usertype="user";
     $result=mysqli_query($data,$sql);
     $sql="insert into login(email,password,usertype) values('$email','$password','$usertype')";
     $result=mysqli_query($data,$sql);
+   
+    
 }}
 ?>
 

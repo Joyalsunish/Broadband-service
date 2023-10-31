@@ -13,18 +13,19 @@
     <ul>
       <li><a href="index.html">Home</a></li><br>
       <li><a href="customerdashboard.php">View plan</a></li><br>
-      <li><a href="#">Change plan</a></li><br>
-      <li><a href="userconnection.php">Request connection</a></li><br>
+      <li><a href="changeplan.php">Change plan</a></li><br>
       <li><a href="feedback.php"> Feedback</a></li><br>
       <li><a href="payment.php">Payment</a></li><br>
-      <li><a href="editprofile.php">Edit profile</a></li>
+      <li><a href="editprofile.php">Edit profile</a></li><br>
+      <li><a href="logout.php">Logout</a></li>
     </ul>
   </div>
   <div id="content">
-    <h1>Welcome to the Customer Dashboard</h1>
+    <h1>PLANS</h1>
   
 
-  <div class="row" style="padding-bottom:20px;">
+  <div class="row" style="padding-bottom:20px;"> 
+  
 
     <?php
       include_once('connection.php');
@@ -45,7 +46,7 @@
         <form method='POST' action='payment.php'><input type='hidden' name='plan_id' value="<?php echo $row['plan_id'];?>">
         <input type='submit' name="<?php echo $row['plan_id'];?>"value='select plan'></form> 
         <!-- <button class="btn btn-info">Select Plan</button> -->
-        </div></div><br><br>
+        </div><br></div><br>
               <?php  }?>
        
     </div></div>

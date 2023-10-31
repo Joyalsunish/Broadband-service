@@ -1,8 +1,10 @@
 <?php
 include('connection.php');
+session_start();
 if(isset($_GET['plan_id'])){
     $plan_id=$_GET['plan_id'];
     echo $plan_id;
+    $_SESSION['palnid']=$plan_id;
 }
 
 
@@ -15,6 +17,10 @@ $customer_id = $_SESSION['plan_id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "ïnside post";
+    $plan_id=$_SESSION['palnid'];
+    echo "palnid";
+    echo $plan_id;
+
     // Handle form submission and update the database with new values
     $plan_name = $_POST['planname'];
     echo $plan_name ;
@@ -28,8 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo $data_limit_value;
     $plan_speed=$_POST['plan_speed'];
     echo $plan_speed;
-    $update_sql = "UPDATE plan SET plan_name='$plan_name', amount='$amount', D_id='$D_id', data_type='$data_type', data_limit_value='$data_limit_value', plan_speed='$plan_speed'  WHERE plan_id= '".$plan_id."'";
-    if ($result=mysqli_query($data,$update_sql)) {
+    $sql = "UPDATE plan SET amount='$amount',plan_name='$plan_name',data_type='$data_type',data_limit_value='$data_limit_value',plan_speed='$plan_speed' where plan_id='".$plan_id."'";
+    
+    
+    if(mysqli_query($data,$sql)) {
         echo "Record updated successfully";
     } else {
         echo "Error updating record: " . $data->error;

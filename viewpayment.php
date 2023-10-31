@@ -2,11 +2,22 @@
 include_once('connection.php');
 if($_SERVER["REQUEST_METHOD"]=="POST") 
 {
+    if(isset($_POST['datepicker']))
+    {
     $date=$_POST['datepicker'];
     echo"datepicker";
     $query = "SELECT * FROM payment WHERE date='".$date."'" ;
     $result = mysqli_query($data,$query);
     echo $date;
+    }
+    else{
+        $query = "SELECT * FROM payment";
+    $result = mysqli_query($data,$query);
+    }
+}
+else{
+    $query = "SELECT * FROM payment";
+    $result = mysqli_query($data,$query);
 }
 
 echo $date;

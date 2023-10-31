@@ -4,7 +4,7 @@ session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST") 
 {
     echo"gfghfgfgh";
-    $F_date=date("d/m/y");
+    $F_date=date("y/m/d");
     $user_id=$_SESSION['userid'];
     $feedback=$_POST['comments'];
     $rating=$_POST['rating'];

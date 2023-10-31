@@ -2,7 +2,7 @@
 include_once'connection.php';
 if($_SERVER["REQUEST_METHOD"]=="POST") 
 {
-    echo "gfgfgfgg";
+
     $D_name=$_POST['cname'];
 echo $D_name;
     $sql="insert into duration(D_name) values('$D_name')";

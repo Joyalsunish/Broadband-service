@@ -10,8 +10,8 @@ body {
   #sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #333;
-    color: #e74219;
+    background-color: #272525;
+    color: #711d08;
     position: fixed;
     padding: 15px;
   }
@@ -33,7 +33,7 @@ body {
   }
 
   a {
-    color: #24e517;
+    color: #1920f0;
     text-decoration: none;
   }
 

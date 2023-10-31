@@ -21,7 +21,7 @@
             <th>Data Limit Value</th>
             <th>Plan Speed</th>
             <th>Amount</th>
-            <th>Description</th>
+            <th>Edit Plan</th>
         </tr>
     
         <?php
@@ -40,8 +40,7 @@
                 echo "<td>" . $row["data_type"] . "</td>";
                 echo "<td>" . $row["data_limit_value"] . "</td>";
                 echo "<td>" . $row["plan_speed"] . "</td>";
-                echo "<td>" . $row["amount"] . "</td>";
-                echo "<td>" . $row["description"] . "</td>";?>
+                echo "<td>" . $row["amount"] . "</td>";?>
                 <td>
          <a href="editplan.php?plan_id=<?php echo $row['plan_id'];?>" class="buttonatag"> EditPlan </a>
                 </td>

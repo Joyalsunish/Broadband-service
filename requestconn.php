@@ -68,6 +68,7 @@ echo $date;
                 echo "<td>" . $row["approve_date"] . "</td>";
                 echo "<td>" . $row["request_date"] . "</td>";?>
                 <td><a href="approveconn.php?id=<?php echo $row['connection_id'];?>" class="approve-button" name="approve">Approve</a></td>
+                <td><a href="delete.php?id=<?php echo $row['connection_id'];?>" class="approve-button" name="approve">Delete</a></td>
                 <!-- <td><input type="submit" class="approve-button" name="approve" value="Approve Connection"></td>"; -->
                <?php echo "</tr>";
             }

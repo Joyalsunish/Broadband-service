@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $card_number=$_POST['card_number'];
     $amount=$_POST['amount'];
     echo"after connection insert";
-    $date=date("d/m/y");
+    $date=date("y/m/d");
     echo "date";
     if(empty($_POST['card_number']))
     {
@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $flag=0;
 }
 else
- if(!preg_match("/^[0-9]{16}+$/", $_POST['card_number'])) 
+ if(!$_POST['card_number'])
     {
         echo"inside card validation";
     $card_numbererr= "Please enter Valid card number";
@@ -49,8 +49,12 @@ if($flag==1){
 $sql="insert into payment(user_id,connection_id,bank_name,card_type,date,card_number,amount) values
 ('$userid','$last_id','$bank_name','$card_type','$date','$card_number','$amount')";
     $result= mysqli_query($data,$sql);
+    $connid=mysqli_insert_id($data);
+    $_SESSION['payid']=$connid;
 $sql="update connection set payment_status = true where connection_id='".$last_id."'";
 $result= mysqli_query($data,$sql);
+
+header("location:paymentbill.php");
 }
 }
 ?>

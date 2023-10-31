@@ -13,7 +13,7 @@ if(isset($_POST['plan_id'])){
     $result=mysqli_query($data,$sql);
     $last_id = mysqli_insert_id($data);
     $_SESSION['connectionid']=$last_id;
-
+   
 }
 
 ?>
