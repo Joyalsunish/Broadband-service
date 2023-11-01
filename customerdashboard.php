@@ -11,17 +11,17 @@
 <body>
   <div id="sidebar">
     <ul>
-      <li><a href="index.html">Home</a></li><br>
-      <li><a href="customerdashboard.php">View plan</a></li><br>
-      <li><a href="changeplan.php">Change plan</a></li><br>
-      <li><a href="feedback.php"> Feedback</a></li><br>
-      <li><a href="payment.php">Payment</a></li><br>
-      <li><a href="editprofile.php">Edit profile</a></li><br>
-      <li><a href="logout.php">Logout</a></li>
+      <li><a href="index.html"  style="color: white;">Home</a></li><br>
+      <li><a href="customerdashboard.php" style="color: white;">View plan</a></li><br>
+      <li><a href="changeplan.php" style="color: white;">Change plan</a></li><br>
+      <li><a href="feedback.php" style="color: white;"> Feedback</a></li><br>
+      <li><a href="payment.php" style="color: white;">Payment</a></li><br>
+      <li><a href="editprofile.php" style="color: white;">Edit profile</a></li><br>
+      <li><a href="logout.php" style="color: white;">Logout</a></li>
     </ul>
   </div>
   <div id="content">
-    <h1>PLANS</h1>
+  <h1 style="color: #fff;font-family: none;">PLANS</h1>
   
 
   <div class="row" style="padding-bottom:20px;"> 
